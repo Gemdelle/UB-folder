@@ -1,0 +1,24 @@
+Pila A = Pila de cartas a ser usada
+Pila B = Pila de cartas de palo Oro
+Pila C = Pila de cartas de palo Espada
+Pila D = Pila de cartas de palo Basto
+
+comenzar ejercicio_2
+	mientras la pila B no está vacía y la pila C no está vacía y la pila D no está vacía hacer
+		tomar una carta de la pila B
+		depositar la carta en la pila A
+		
+		tomar una carta de la pila B
+		depositar la carta en la pila A
+		
+		tomar una carta de la pila C
+		depositar la carta en la pila A
+		
+		tomar una carta de la pila D
+		depositar la carta en la pila A
+		
+		tomar una carta de la pila D
+		depositar la carta en la pila A
+	finmientras
+fin ejercicio_2
+
