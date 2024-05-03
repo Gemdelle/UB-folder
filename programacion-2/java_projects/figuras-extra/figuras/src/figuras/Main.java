@@ -20,5 +20,4 @@ public class Main {
         Todo dibu = c;
         System.out.println(dibu.area());
 	}
-
 }

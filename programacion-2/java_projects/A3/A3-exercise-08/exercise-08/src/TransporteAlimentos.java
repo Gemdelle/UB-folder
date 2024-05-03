@@ -10,11 +10,30 @@ public class TransporteAlimentos extends Transporte{
         this.alimentos = new ArrayList<>();
     }
 
+    //    03. SETTERS & GETTERS
     public ArrayList<Alimento> getAlimentos() {
         return alimentos;
     }
 
     public void setAlimentos(ArrayList<Alimento> alimentos) {
         this.alimentos = alimentos;
+    }
+
+//    04. METHODS
+    private int calcularPeso() {
+        int pesoTotal = 0;
+        for(Alimento alimento : alimentos) {
+            int pesoAlimento = alimento.getPeso() * alimento.getCantidad();
+            pesoTotal += pesoAlimento;
+        }
+        return pesoTotal;
+    }
+
+    @Override
+    public float calcularCostoTotal() {
+        int pesoTotal = calcularPeso();
+        float pesoKg = calcularPesoKg(pesoTotal);
+
+        return calcularPeso() * pesoKg + calcularEnvio(salida,llegada);
     }
 }

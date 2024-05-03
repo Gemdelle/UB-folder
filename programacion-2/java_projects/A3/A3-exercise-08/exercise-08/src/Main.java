@@ -30,14 +30,6 @@
 // Escribir un método (y mostrar su uso) que, para dos transportes A y B, indique aquél de mayor costo.
 // Escribir un método en la clase aplicación que reciba un conjunto de transportes y muestre en pantalla su información según el tipo de transporte.
 
-
-public float calcularDecimales(int cantidadDecimales, float area) {
-
-    for 
-    return area;
-}
-
-
 public class Main {
     public static void main(String[] args) {
 

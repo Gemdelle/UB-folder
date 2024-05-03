@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class Transporte {
+public abstract class Transporte implements Transportable {
     // 01. ATTRIBUTES
     protected String patente;
     protected String descripcion;
@@ -49,12 +49,25 @@ public abstract class Transporte {
     }
 
     // 03. METHODS
-    public float calcularPeso(ArrayList<Float> lista) {
-        float pesoTotal = 0;
-        for(Float peso : lista) {
-            pesoTotal += peso;
-        }
+    public abstract float calcularCostoTotal();
 
-        return pesoTotal;
+    public float calcularPesoKg(int pesoTotal) {
+        float pesoKg = 0;
+        if (0<pesoTotal && pesoTotal<1200) {
+            pesoKg = 6;
+        } else if (1201<pesoTotal && pesoTotal<2400) {
+            pesoKg = 5.5f;
+        } else if (2401<pesoTotal && pesoTotal<4000) {
+            pesoKg = 4.3f;
+        } else {
+            pesoKg = 3.6f;
+        }
+        return pesoKg;
+    }
+
+    public int calcularEnvio(String salida, String llegada) {
+        int indexSalida = ciudades.indexOf(salida);
+        int indexLlegada = ciudades.indexOf(llegada);
+        return precios[indexSalida][indexLlegada];
     }
 }
