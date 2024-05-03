@@ -36,10 +36,10 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Alimento> alimentos = crearAlimentosRandom();
-        TransporteAlimentos transporteAlimentos = new TransporteAlimentos("AF 373 EQ", "Transporte de alimentos para la empresa Alimentos Copados S.A", "Buenos Aires", "Rosario", alimentos);
+        TransporteAlimentos transporteAlimentos = new TransporteAlimentos("AF 373 EQ", "Transporte de alimentos para la empresa Alimentos Copa2 S.A", "Buenos Aires", "Rosario", alimentos);
         System.out.printf("El transportador de Alimentos con patente [%s] pasó un costo total para transportar alimentos de: %f\n", transporteAlimentos.getPatente(), transporteAlimentos.calcularCostoTotal());
 
-        TransporteBultos transporteBultos = new TransporteBultos("OK 666 KO", "Transporte mayorista de bultos de la empresa Bultos Veloces S.A", "Rosario", "Santa Fe", 70, 40, 6);
+        TransporteBultos transporteBultos = new TransporteBultos("OK 666 KO", "Transporte mayorista de bultos de la empresa B's Veloces S.A", "Rosario", "Santa Fe", 70, 40, 6);
         System.out.printf("El transportador de Bultos con patente [OK 666 KO] pasó un costo total para transportar bultos de: %f\n", transporteBultos.calcularCostoTotal());
 
         TransporteGanado transporteGanado = new TransporteGanado("OL 123 LA", "Transporte de ganado para la empresa Mataderos del Sur S.A", "Misiones", "Cordoba", 35, 500);
