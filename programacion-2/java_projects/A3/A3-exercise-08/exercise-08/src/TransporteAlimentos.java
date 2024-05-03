@@ -7,7 +7,7 @@ public class TransporteAlimentos extends Transporte{
     // 02. CONSTRUCTOR
     public TransporteAlimentos(String patente, String descripcion, String salida, String llegada, ArrayList<Alimento> alimentos) {
         super(patente, descripcion, salida, llegada);
-        this.alimentos = new ArrayList<>();
+        this.alimentos = alimentos;
     }
 
     //    03. SETTERS & GETTERS

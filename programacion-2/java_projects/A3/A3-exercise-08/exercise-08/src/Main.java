@@ -30,10 +30,28 @@
 // Escribir un método (y mostrar su uso) que, para dos transportes A y B, indique aquél de mayor costo.
 // Escribir un método en la clase aplicación que reciba un conjunto de transportes y muestre en pantalla su información según el tipo de transporte.
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
+        ArrayList<Alimento> alimentos = crearAlimentosRandom();
+        TransporteAlimentos transporteAlimentos = new TransporteAlimentos("AF 373 EQ", "Transporte de alimentos para la empresa Alimentos Copados S.A", "Buenos Aires", "Rosario",alimentos);
+        System.out.printf("El transportador de Alimentos con patente [AF 373 EQ] pasó un costo total para transportar el ganado de: %f\n", transporteAlimentos.calcularCostoTotal());
 
+        TransporteBultos transporteBultos = new TransporteBultos("OK 666 KO", "Transporte mayorista de bultos de la empresa Bultos Veloces S.A", "Rosario", "Santa Fe", 70, 40, 6);
+        System.out.printf("El transportador de Bultos con patente [OK 666 KO] pasó un costo total para transportar el ganado de: %f\n", transporteBultos.calcularCostoTotal());
 
+        TransporteGanado transporteGanado = new TransporteGanado("OL 123 LA", "Transporte de ganado para la empresa Mataderos del Sur S.A", "Misiones", "Cordoba", 35, 500);
+        System.out.printf("El transportador de Ganado con patente [OL 123 LA] pasó un costo total para transportar el ganado de: %f\n", transporteGanado.calcularCostoTotal());
+    }
 
+    private static ArrayList<Alimento> crearAlimentosRandom() {
+        Random random = new Random();
+        ArrayList<Alimento> alimentos = new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
+           alimentos.add(new Alimento(random.nextInt(30 - 5) + 5, random.nextInt(50 - 20) + 20));
+        }
+        return alimentos;
     }
 }

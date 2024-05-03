@@ -1,14 +1,13 @@
-import java.util.ArrayList;
 import java.util.Random;
 
 public class TransporteGanado extends Transporte {
 //    01. ATTRIBUTES
     int cabezas;
-    float pesoPromedio;
+    int pesoPromedio;
 
 //    02. CONSTRUCTOR
 
-    public TransporteGanado(String patente, String descripcion, String salida, String llegada, int cabezas, float pesoPromedio) {
+    public TransporteGanado(String patente, String descripcion, String salida, String llegada, int cabezas, int pesoPromedio) {
         super(patente, descripcion, salida, llegada);
         this.cabezas = cabezas;
         this.pesoPromedio = pesoPromedio;
@@ -24,18 +23,18 @@ public class TransporteGanado extends Transporte {
         this.cabezas = cabezas;
     }
 
-    public float getPesoPromedio() {
+    public int getPesoPromedio() {
         return pesoPromedio;
     }
 
-    public void setPesoPromedio(float pesoPromedio) {
+    public void setPesoPromedio(int pesoPromedio) {
         this.pesoPromedio = pesoPromedio;
     }
 
     //    04. METHODS
     private int calcularPeso() {
         Random random = new Random();
-        return cabezas * (random.nextInt(100)+500); // el promedio va a ser un número entre 500 y 600
+        return cabezas * (random.nextInt(100) + pesoPromedio); // el promedio va a ser un número entre 500 y 600
     }
 
     @Override
