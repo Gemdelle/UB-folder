@@ -5,7 +5,8 @@ public class CatalogoCD extends Catalogo{
     private boolean elCatalogoDeCDsEstaCorriendo = true;
 
     // 03. METHODS
-    public List<Multimedia> listarInterprete(String interprete) {
+    //    Editar método abstracto heredado de Catalogo
+    public List<Multimedia> listarAutor(String interprete) {
         List<Multimedia> listaInterprete = new ArrayList<>();
         for(Multimedia multimedia : listaMultimedia) {
             if(((CD) multimedia).getInterprete().equals(interprete)) {
@@ -117,7 +118,7 @@ public class CatalogoCD extends Catalogo{
                 case 12 -> {
                     System.out.println("Introduzca el intérprete de los CDs a buscar: ");
                     String interprete = scanner.next();
-                    List<Multimedia> listadoDeCDsPorInterprete = listarInterprete(interprete);
+                    List<Multimedia> listadoDeCDsPorInterprete = listarAutor(interprete);
                     for (Multimedia cd : listadoDeCDsPorInterprete) {
                         System.out.println(cd.getTitulo());
                     }

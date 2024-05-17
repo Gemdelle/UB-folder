@@ -16,7 +16,7 @@ import java.util.List;
 // contarTodo()
 // contarObtenido()
 
-public class Catalogo {
+public abstract class Catalogo {
 //    01. ATTRIBUTES
     protected List<Multimedia> listaMultimedia;
 
@@ -85,6 +85,9 @@ public class Catalogo {
         copiaListaMultimedia.sort((dvd,dvd2) -> dvd.getTitulo().compareToIgnoreCase(dvd2.getTitulo()));
         return copiaListaMultimedia;
     }
+
+//    MÉTODO QUE APLICA POLIMORFISMO (se declara como abstracto y reescribe en catálogoCD y catálogoDVD)
+    public abstract List<Multimedia> listarAutor(String autor);
 
 //    CONTAR
     public int contarTodo() {

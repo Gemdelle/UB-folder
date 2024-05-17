@@ -8,7 +8,8 @@ public class CatalogoDVD extends Catalogo {
     private boolean elCatalogoDeDVDsEstaCorriendo = true;
 
     // 03. METHODS
-    public List<Multimedia> listarDirector(String director) {
+    //    Editar método abstracto heredado de Catalogo
+    public List<Multimedia> listarAutor(String director) {
 
         List<Multimedia> listaDirector = new ArrayList<>();
         for (Multimedia multimedia : listaMultimedia) {
@@ -87,7 +88,7 @@ public class CatalogoDVD extends Catalogo {
                 case 8 -> {
                     System.out.println("Introduzca el director de los DVD a listar: ");
                     String director = scanner.next();
-                    List<Multimedia> dvdsDeDirector = listarDirector(director);
+                    List<Multimedia> dvdsDeDirector = listarAutor(director);
                     for (Multimedia dvd : dvdsDeDirector) {
                         if (((DVD) dvd).getDirector().equals(director)) {
                             System.out.println(dvd.getTitulo());
