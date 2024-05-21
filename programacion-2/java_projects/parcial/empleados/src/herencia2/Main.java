@@ -14,7 +14,7 @@ public class Main {
 //        System.out.println(b);
 //	}
 	public static void main(String[] args) {
-		Empleado nomina [] = {
+		Empleado [] nomina  = {
 				 new Asalariado("juan","vazquez","45678",1234.90),
 				 new EmpleadoComision("pepe","garcia", "12345",10,2000),
 				 new EmpleadoBase("pepe","garcia", "12345",10,2000,1000000),
