@@ -22,3 +22,11 @@ public class Main {
 	}
 
 }
+
+//// cmd + barra
+//// ctrl + N
+//// MÉTODOS: declarar en interface, implementar en el padre
+//
+//// Listas
+//// 01. Arrays -> Figura [] v = {c, r, new Equilatero(a,b,s)}; usar en cosas INMUTABLES (ciudades, etc.) [100,300] [tit1, tit2]
+//// 02. List -> List<Multimedia> listaMultimedia = new ArrayList<Multimedia>(); cosas MUTABLES

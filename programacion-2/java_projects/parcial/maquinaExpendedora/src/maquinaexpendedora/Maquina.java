@@ -26,6 +26,13 @@ public abstract class Maquina implements Maximos{
 	public int getCacao() {
 		return cacao;
 	}
+
+	public GregorianCalendar getFecha() {
+		return fecha;
+	}
+	public void setFecha(GregorianCalendar fecha) {
+		this.fecha = fecha;
+	}
 	
     public int reponerCafe(int c)
     {
@@ -40,12 +47,7 @@ public abstract class Maquina implements Maximos{
     	}
     	return sobra;
     }
-	public GregorianCalendar getFecha() {
-		return fecha;
-	}
-	public void setFecha(GregorianCalendar fecha) {
-		this.fecha = fecha;
-	}
+
     public boolean cafeSolo ()
     {
     	boolean preparado = false;
